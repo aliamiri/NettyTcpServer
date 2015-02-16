@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-public class DiscardServerHandler extends ChannelInboundHandlerAdapter { // (1)
+public class ServerHandler extends ChannelInboundHandlerAdapter { // (1)
 
     static int i = 0;
 
