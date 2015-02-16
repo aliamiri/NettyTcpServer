@@ -1,12 +1,9 @@
-package io.netty.example.discard;
+package com.asan.server.discard;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
-/**
- * Handles a server-side channel.
- */
 public class DiscardServerHandler extends ChannelInboundHandlerAdapter { // (1)
 
     static int i = 0;
@@ -40,7 +37,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter { // (1)
         ByteBuf out =ctx.alloc().buffer(len);
 
         out.writeBytes(fullMessage);
-        ctx.writeAndFlush(out); 
+        ctx.writeAndFlush(out);
     }
 
     private byte[] swapbytes(byte[] in, int i,int j){

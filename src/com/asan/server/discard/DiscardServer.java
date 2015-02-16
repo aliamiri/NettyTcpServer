@@ -1,4 +1,4 @@
-package io.netty.example.discard;
+package com.asan.server.discard;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -40,7 +40,7 @@ public class DiscardServer {
             ChannelFuture f = b.bind(port).sync(); // (7)
 
             // Wait until the server socket is closed.
-            // In this example, this does not happen, but you can do that to gracefully
+            // In this server, this does not happen, but you can do that to gracefully
             // shut down your server.
             f.channel().closeFuture().sync();
         } finally {
