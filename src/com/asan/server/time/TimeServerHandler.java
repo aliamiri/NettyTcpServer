@@ -1,4 +1,4 @@
-package io.netty.example.time;
+package com.asan.server.time;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
