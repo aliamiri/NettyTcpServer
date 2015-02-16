@@ -1,4 +1,4 @@
-package com.asan.server.discard;
+package com.asan.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
