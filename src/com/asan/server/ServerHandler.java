@@ -28,7 +28,6 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 currentLen = Integer.parseInt(BCDtoString(b));
             }
             if (buf.readableBytes() >= currentLen && currentLen > 0) {
-
                 int i = 0;
                 byte[] fullMessage = new byte[currentLen + 2];
                 byte[] len = DecToBCDArray(currentLen, 2);
@@ -54,7 +53,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 }
                 currentLen = 0;
             }
-            if ((buf.readableBytes() < currentLen) || (currentLen == 0 && buf.readableBytes() < 1) )
+            if ((buf.readableBytes() < currentLen) || (currentLen == 0 && buf.readableBytes() < 1))
                 break;
         }
     }
